@@ -1,6 +1,6 @@
 ﻿namespace RegistroDeAcesso.Modelos;
 
-internal class Entrega
+internal class Entrega : IResumoAcesso
 {
     public Entrega(string representante)
     {
@@ -8,4 +8,6 @@ internal class Entrega
     }
 
     public string Representante { get; }
+
+    public string Resumo => $"Entrega feita pelo representante {Representante}";
 }

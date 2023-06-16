@@ -1,11 +1,13 @@
-﻿namespace RegistroDeAcesso.Relatorios;
+﻿using RegistroDeAcesso.Modelos;
+
+namespace RegistroDeAcesso.Relatorios;
 
 internal class RelatorioDeAcesso
 {
     private List<AcessoAoPredio> acessos = new();
-    public void RegistrarEntrada(??? entrada)
+    public void RegistrarEntrada(IResumoAcesso entrada)
     {
-        acessos.Add(new AcessoAoPredio(DateTime.Now, ???));
+        acessos.Add(new AcessoAoPredio(DateTime.Now, entrada.Resumo));
     }
 
     public void ExibirRegistroDoMes()

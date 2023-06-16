@@ -1,6 +1,6 @@
 ﻿namespace RegistroDeAcesso.Modelos;
 
-internal class Visitante
+internal class Visitante : IResumoAcesso
 {
     public Visitante(string nome, string documento, string sala)
     {
@@ -12,4 +12,6 @@ internal class Visitante
     public string Nome { get; }
     public string Documento { get; }
     public string Sala { get; }
+
+    public string Resumo => $"Visita de {Nome}, doc nº {Documento}, à sala {Sala}";
 }

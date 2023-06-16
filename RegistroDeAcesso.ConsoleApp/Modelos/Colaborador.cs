@@ -1,6 +1,6 @@
 ﻿namespace RegistroDeAcesso.Modelos;
 
-internal class Colaborador
+internal class Colaborador : IResumoAcesso
 {
     public Colaborador(int idAcesso)
     {
@@ -8,4 +8,6 @@ internal class Colaborador
     }
 
     public int IdAcesso { get; }
+
+    public string Resumo => $"Colaborador id: {IdAcesso}";
 }
